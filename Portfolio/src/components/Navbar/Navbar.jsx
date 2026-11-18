@@ -17,6 +17,7 @@ const Navbar = () => {
 
     <div className="hamburger" ref={menu} onClick={()=>{
         mobile.current.classList.toggle("isActiveMobileClass")
+        menu.current.classList.toggle("isActivehamburgerClass")
     }} >
         <div className="ham"></div>
         <div className="ham"></div>

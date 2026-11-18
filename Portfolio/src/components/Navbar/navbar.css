@@ -5,8 +5,9 @@ nav{
     height: 80px;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 20px;
     position: fixed;
+    z-index: 20;
 }
 ul{
     display: flex;
@@ -32,7 +33,7 @@ nav ul a:hover{
     color:rgb(159, 239, 239);
     border-bottom: 1px solid rgb(159, 239, 239);
 }
-h1{
+nav h1{
     font-size: 40px;
     background: linear-gradient(to right,rgb(98, 174, 190),rgb(44, 44, 73));
     background-clip: text;
@@ -52,7 +53,25 @@ h1{
    width: 30px;
    height: 2px;
    background-color: aliceblue;
+   transition: all 0.5s;
     
+}
+
+.isActivehamburgerClass .ham:nth-child(1){
+    transform:rotate(45deg);
+    position:relative;
+    top:10px;
+
+}
+.isActivehamburgerClass .ham:nth-child(2){
+    opacity:0;
+}
+
+.isActivehamburgerClass .ham:nth-child(3){
+    transform:rotate(-45deg);
+    position:relative;
+    top:-10px;
+
 }
 
 
@@ -93,5 +112,10 @@ h1{
 @media(min-width:750px){
     .mobilemenu{
         display: none;
+    }
+
+    .isActiveMobileClass{
+      transform: translateX(100%);
+
     }
 }
